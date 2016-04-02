@@ -113,7 +113,7 @@ volk_32f_log2_32f_generic(float* bVector, const float* aVector, unsigned int num
   unsigned int number = 0;
 
   for(number = 0; number < num_points; number++) {
-    *bPtr++ = log2f(*aPtr++);
+    *bPtr++ = logf(*aPtr++)/logf(2.0f);
   }
 
 }
@@ -285,7 +285,7 @@ volk_32f_log2_32f_u_generic(float* bVector, const float* aVector, unsigned int n
   unsigned int number = 0;
 
   for(number = 0; number < num_points; number++){
-    *bPtr++ = log2f(*aPtr++);
+    *bPtr++ = logf(*aPtr++)/logf(2.0f);
   }
 }
 

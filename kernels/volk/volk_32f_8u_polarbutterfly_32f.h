@@ -78,7 +78,7 @@ llr_odd(const float la, const float lb)
 {
   const float ala = fabs(la);
   const float alb = fabs(lb);
-  return copysignf(1.0f, la) * copysignf(1.0f, lb) * (ala > alb ? alb : ala);
+  return _copysign(1.0f, la) * _copysign(1.0f, lb) * (ala > alb ? alb : ala);
 }
 
 static inline void
