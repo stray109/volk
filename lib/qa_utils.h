@@ -51,6 +51,7 @@ class volk_test_params_t {
         std::string _kernel_regex;
     public:
         // ctor
+		volk_test_params_t(){};
         volk_test_params_t(float tol, lv_32fc_t scalar, unsigned int vlen, unsigned int iter,
                            bool benchmark_mode, std::string kernel_regex) :
             _tol(tol), _scalar(scalar), _vlen(vlen), _iter(iter),
@@ -72,6 +73,7 @@ class volk_test_case_t {
         volk_test_params_t _test_parameters;
         std::string _puppet_master_name;
     public:
+		volk_test_case_t(){};
         volk_func_desc_t desc() {return _desc;};
         void (*kernel_ptr()) () {return _kernel_ptr;};
         std::string name() {return _name;};
@@ -89,6 +91,7 @@ class volk_test_case_t {
             _desc(desc), _kernel_ptr(kernel_ptr), _name(name), _test_parameters(test_parameters),
             _puppet_master_name(puppet_master_name)
             {};
+
 };
 
 /************************************************
